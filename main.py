@@ -9,7 +9,7 @@ import sys
 import numpy as np
 
 # adjust n to for different array sizes
-n = 1000
+n = 100000
 randNums = np.random.randint(0, 100, n)
 
 print('O(n^2) Algorithms times:')
@@ -53,9 +53,14 @@ QuickSort.sortArrayRecursively(theList)
 end = time.time()
 print(f'\tQuick Recursively Sort: {end - start}')
 
+# uncomment to see iterative quick sort but it is slow
+# due to not optimizing at low values of n
+# use insertion sort when n gets low
+
+"""
 theList = randNums.copy()
 start = time.time()
 QuickSort.sortArrayIteratively(theList)
 end = time.time()
 print(f'\tQuick Iteratively Sort: {end - start}')
-
+"""
