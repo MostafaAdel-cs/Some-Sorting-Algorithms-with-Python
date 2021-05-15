@@ -9,7 +9,7 @@ import sys
 import numpy as np
 
 # adjust n to for different array sizes
-n = 100000
+n = 300000
 randNums = np.random.randint(0, 100, n)
 
 print('O(n^2) Algorithms times:')
