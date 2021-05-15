@@ -8,9 +8,11 @@ from SortingO_NLog_N import QuickSort
 import sys
 import numpy as np
 
+sys.setrecursionlimit(10**6)
+
 # adjust n to for different array sizes
-n = 300000
-randNums = np.random.randint(0, 100, n)
+n = 100000
+randNums = np.random.randint(-10000000, 10000000, n)
 
 print('O(n^2) Algorithms times:')
 theList = randNums.copy()

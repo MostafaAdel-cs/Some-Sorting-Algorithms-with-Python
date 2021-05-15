@@ -6,11 +6,16 @@ def sortArrayRecursively(theList: list):
     return None
 
 
+# optimized using tail recursion and randomizing pivot
 def quickSort(theList: list, first, last):
     if first < last:
-        q = randomPartition(theList, first, last)
-        quickSort(theList, first, q - 1)
-        quickSort(theList, q + 1, last)
+        pivot = randomPartition(theList, first, last)
+        if pivot - first < pivot - last:
+            quickSort(theList, first, pivot - 1)
+            first = pivot + 1
+        else:
+            quickSort(theList, pivot + 1, last)
+            last = pivot - 1
     return None
 
 
